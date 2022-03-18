@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS 02 - integração html</title>
+  </head>
+  <body>
+    <header><h2>JS 02 - integração html</h2></header>
+    <hr />
+    <input id="nome" type="text" placeholder="Qual o seu nome?" />
+    <input id="exibirNome" type="button" value="Exibir nome" />
+    <p id="escreverNome"></p>
+
+    <script>
+      function funcaoExibirNome() {
+        let nome = document.getElementById("nome").value;
+        document.getElementById("escreverNome").textContent =
+          "Olá " + nome + "!";
+      }
+      var mostrar = document.getElementById("exibirNome");
+      mostrar.addEventListener("click", funcaoExibirNome);
+    </script>
+  </body>
+</html>
