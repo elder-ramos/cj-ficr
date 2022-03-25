@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS 03</title>
+  </head>
+  <body>
+    <header><h1>Calculadora de horas</h1></header>
+    <hr />
+    <p>Insira o número de dias e horas da sua viagem:</p>
+    <input id="dias" type="number" placeholder="Quantidade de dias" />
+    <input id="horas" type="number" placeholder="Quantidade de horas" />
+    <input id="exibir" type="button" value="Calcular" />
+    <p id="total"></p>
+  </body>
+  <script>
+    function exibirHoras() {
+      let dia = parseInt(document.getElementById("dias").value);
+      let hora = parseInt(document.getElementById("horas").value);
+      tt = dia * 24 + hora;
+      document.getElementById("total").textContent =
+        "O total de horas foi de " + tt + "!";
+    }
+    var mostrar = document.getElementById("exibir");
+    mostrar.addEventListener("click", exibirHoras);
+  </script>
+</html>
