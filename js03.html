@@ -11,15 +11,23 @@
     <input id="dias" type="number" placeholder="Quantidade de dias" />
     <input id="horas" type="number" placeholder="Quantidade de horas" />
     <input id="exibir" type="button" value="Calcular" />
-    <p id="total"></p>
+    <p id="totalH"></p>
+    <p id="totalM"></p>
+    <p id="totalS"></p>
   </body>
   <script>
     function exibirHoras() {
       let dia = parseInt(document.getElementById("dias").value);
       let hora = parseInt(document.getElementById("horas").value);
       tt = dia * 24 + hora;
-      document.getElementById("total").textContent =
-        "O total de horas foi de " + tt + "!";
+      minutos = tt * 60;
+      segundos = minutos * 60;
+      document.getElementById("totalH").textContent =
+        "O total de horas foi de " + tt + ".";
+      document.getElementById("totalM").textContent =
+        "O total de minutos foi de " + minutos + ".";
+      document.getElementById("totalS").textContent =
+        "O total de segundos foi de " + segundos + ".";
     }
     var mostrar = document.getElementById("exibir");
     mostrar.addEventListener("click", exibirHoras);
