@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Loja</title>
+</head>
+<body>
+    <label for="valor">Digite o valor aqui:</label>
+    <input id="valor" type="number" min="1" placeholder="Valor...">
+    <br> <br>
+
+    <select id="pagamento">
+        <option id="dinheiro">À vista</option>
+        <option id="cartao">Dividido em 3x</option>
+    </select>
+    <input id="exibir" type="button" value="Calcular">
+    <p id="resultado"></p>
+    <p id="teste"></p>
+</body>
+<script>
+function exibirTotal(){
+    let total = parseInt(document.getElementById("valor").value);
+    let pag = document.getElementById("pagamento").value;
+    pagCartao = total/3
+    pagDinheiro = total*0.9
+    document.getElementById("resultado").textContent = "O valor à vista é de " + pagDinheiro + " e o valor dividido em 3x é de " + pagCartao;
+}
+    var mostrar = document.getElementById("exibir");
+    mostrar.addEventListener("click", exibirTotal);
+</script>
+</html>

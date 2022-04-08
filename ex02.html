@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora </title>
+</head>
+<body>
+    <label for="valorConta">Valor da conta: </label>
+    <input id="valorConta" type="number" placeholder="Digite o valor aqui...">
+    <br>
+    <label for="pessoas">Número de pessoas:</label>
+    <input id="pessoas" type="number" placeholder="Número de clientes">
+    <br>
+    <input id="exibir" type="button" value="Calcular">
+    <p id="paragrafo"></p>
+</body>
+<script>
+    function calculadoravalor() {
+        let valorconta = parseInt(document.getElementById("valorConta").value);
+        let pessoasvalor = parseInt(document.getElementById("pessoas").value);
+        total = valorconta / pessoasvalor
+        document.getElementById("paragrafo").textContent = "O total da conta foi de " + valorconta + " e o total a ser pago por cada pessoa é " + total
+    }
+    var mostrar = document.getElementById("exibir");
+    mostrar.addEventListener("click", calculadoravalor)
+</script>
+</html>

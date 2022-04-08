@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo Nota</title>
+</head>
+<body>
+    <label for="nota1">Nota 1:</label>
+    <input id="nota1" type="number" placeholder="Digite a nota 1">
+    <br>
+
+    <label for="nota2">Nota 2:</label>
+    <input id="nota2" type="number" placeholder="Digite a nota 2">
+    <br>
+
+    <input id="exibir" type="button" value="Calcular">
+    <p id="resultado"></p>
+</body>
+<script>
+    function calculoMedia() {
+        let valor1 = parseInt(document.getElementById("nota1").value)
+        let valor2 = parseInt(document.getElementById("nota2").value)
+        total = (valor1 + valor2)/2
+        document.getElementById("resultado").textContent = "A média do aluno é " + total
+    }
+    var mostrar = document.getElementById("exibir")
+    mostrar.addEventListener("click", calculoMedia)
+</script>
+</html>
