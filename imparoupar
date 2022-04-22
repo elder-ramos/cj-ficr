@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Impar ou par</title>
+</head>
+<body>
+    <h1>Descubra se o número é ímpar ou par</h1>
+    
+    <input id="num" type="number" min="0" placeholder="Digite um número aqui">
+    <input id="enviar" type="button" value="Enviar">
+    
+    <p id="imparOuPar"></p>
+    <p id="teste"></p>
+</body>
+
+<script>
+    function iOuP(){
+        let numero = parseInt(document.getElementById("num").value)
+        let calc = numero%2
+        document.getElementById("teste").textContent = ""
+        if (calc == 1){
+            document.getElementById("imparOuPar").textContent = "O número é ímpar."
+        }
+        else {
+            document.getElementById("imparOuPar").textContent = "O número é par."
+        }
+    }
+    var mostrar = document.getElementById("enviar")
+    mostrar.addEventListener("click", iOuP)
+</script>
+
+</html>
